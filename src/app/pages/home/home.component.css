@@ -1,0 +1,533 @@
+.slider-container {
+  bottom: 20%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  width: 100%;
+
+}
+.slide {
+  opacity: 0;
+  height: 100%;
+  width: 0;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease, background-image 0.4s ease;
+  z-index: 1;
+
+}
+.slide img {
+  height: 100%;
+  width: 100vw;
+  object-fit: cover;
+  object-position: center;
+}
+.slide.active {
+  opacity: 1;
+}
+.arrow {
+  position: absolute;
+  background-color: transparent;
+  color: #fc4c10;
+  padding: 20px;
+  font-size: 30px;
+  border: none;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+}
+.arrow:focus {
+  outline: 0;
+}
+.left-arrow {
+  left: 10px;
+}
+.right-arrow {
+  right: 10px;
+}
+.tilte{
+  position: absolute;
+  color: #fc4c10;
+  font-size: 40px;
+  top: 10%;
+  left: 10%;
+  z-index: 2;
+
+}
+.tilte,.subt{
+  -webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000)  both;
+  animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000)  both;
+}
+.subt{
+  position: absolute;
+  color: #484d5b;
+  font-size:20px;
+  top: 20%;
+  left: 10%;
+  z-index: 2;
+  font-weight: 400;
+}
+.btn{
+  position: absolute;
+  color: #fff;
+  font-size:20px;
+  top: 38%;
+  left: 10%;
+  z-index: 2;
+  border-radius: 1.5em;
+  padding: 1em;
+  font-family: sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  background: #fc4c10;
+  -webkit-animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) .5s both;
+  animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000)  .5s both;
+}
+.btn:hover{
+  transition: .4s ease;
+  background: #fff;
+  color:#fc4c10;
+  border: solid 2px #fc4c10;
+}
+.servicios{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+  background-image: url('src/assets/fondob.jpg');
+  height: 700px;
+}
+.calidad-container{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.txt-calidad{
+  width: 50%;
+}
+.calidad{
+  width:70%;
+  display: flex;
+  gap: 2em;
+}
+.titulo{
+  font-family: 'Montserrat', sans-serif;
+  color: #212529;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+p{
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1em;
+  color: #212529;
+  font-size: 16px;
+}
+.btn-servicios{
+  padding: 1em 3em;
+  color: white;
+  background: #fc4c10;
+  text-decoration: none;
+  border-radius: 1.5em;
+}
+.servicios-container {
+  width: 75%;
+  display: flex;
+  gap: 2em;
+}
+.servicios-container > div {
+  width: calc(100% / 3);
+}
+.servicio2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+img {
+  width: 100%;
+}
+.servicios-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.servicios-title {
+  margin-left: 6em;
+}
+.diseño{
+  position: relative;
+  overflow: hidden;
+  background-image: url('src/assets/autocad.webp');
+  /* Reemplaza con la URL de tu imagen */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 700px;
+}
+.overlay {
+  position: absolute;
+  background-color: rgba(33, 37, 41,.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+.diseño:hover .overlay {
+  background-color: rgba(252, 76, 16, 0.9);
+}
+.texto {
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  font-size: 30px;
+  color: white;
+}
+.boton {
+  position: absolute;
+  bottom: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fc4c10;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+  transition: background-color 0.3s ease, transform 1s ease;
+  cursor: pointer;
+}
+.diseño:hover .boton {
+  opacity: 1;
+  background-color: #fff;
+  color: #fc4c10;
+  transform: translate(-50%, -70%);
+  /* Movemos el botón hacia arriba al hacer hover */
+}
+.certificaciones{
+  position: relative;
+  overflow: hidden;
+  background-image: url('src/assets/certificaciones.webp');
+
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 335px;
+}
+.certificaciones:hover .overlay {
+  background-color: rgba(252, 76, 16, 0.9);
+}
+.certificaciones{
+  position: relative;
+  overflow: hidden;
+  background-image: url('src/assets/certificaciones.webp');
+  /* Reemplaza con la URL de tu imagen */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 333px;
+}
+.certificaciones:hover .overlay {
+  background-color: rgba(252, 76, 16, 0.9);
+}
+.ventas{
+  position: relative;
+  overflow: hidden;
+  background-image: url('src/assets/bombas.webp');
+
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 335px;
+}
+.ventas:hover .overlay {
+  background-color: rgba(252, 76, 16, 0.9);
+}
+.ventas:hover .boton2 {
+  opacity: 1;
+  background-color: #fff;
+  color: #fc4c10;
+  transform: translate(-50%, -70%);
+
+}
+.boton2 {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fc4c10;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+.certificaciones:hover .boton2 {
+  opacity: 1;
+  background-color: #fff;
+  color: #fc4c10;
+  transform: translate(-50%, -70%);
+
+}
+.instalacion{
+  position: relative;
+  overflow: hidden;
+  background-image: url('src/assets/instalacion.webp');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 700px;
+}
+.instalacion:hover .overlay {
+  background-color: rgba(252, 76, 16, 0.9);
+}
+.instalacion:hover .boton {
+  opacity: 1;
+  background-color: #fff;
+  color: #fc4c10;
+  transform: translate(-50%, -70%);
+  /* Movemos el botón hacia arriba al hacer hover */
+}
+.posicion{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.center{
+  padding-top: 1em;
+  margin-top: 2em;
+  margin-left: 12%;
+}
+#why,#calidad{
+
+  background: #dfe6e3;
+}
+.why{
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  gap: 2em;
+  margin-left: 10%;
+}
+.borde{
+  margin-left: 5px;
+  text-align: center;
+}
+.why i{
+  font-size: 4em;
+}
+.txt{
+  color: #0550a1;
+}
+.why p{
+  margin-top: 1em;
+}
+.main{
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 4em;
+  text-align: center;
+  padding-top: 4em;
+}
+#contact{
+  background-image: url("src/assets/contact.jpg");
+  height: 450px;
+}
+.contact-container{
+  background-color: rgba(33, 37, 41,.8);
+  height: 100%;
+}
+.main h1{
+  font-family: 'Nokora', sans-serif;
+  font-size: 4em;
+  color: #f7f7f7;
+}
+.main p{
+  font-family: 'Nokora', sans-serif;
+  font-size: 1.3em;
+  color: #f7f7f7;
+}
+.main .button{
+  border: solid 3px white;
+  background: none;
+  color: white;
+  padding: 1.5em 3em;
+  cursor: pointer;
+  text-decoration: none;
+}
+.main .button:hover{
+  background: white;
+  color: #14161F;
+  transition-duration: .8s;
+}
+.calidad-container {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 650px;
+  width: 50%;
+}
+.img-calidad{
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.activo{
+  opacity: 1;
+  width: 70%;
+  margin-left: 15%;
+  height: 500px;
+  transition:  opacity 1s;
+}
+.activo img{
+  height: 480px;
+}
+.bolota{
+  gap: 1em;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.bola-activa {
+  background: #fc4c10 !important;
+}
+.bola{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background: #484d5b;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .why{
+    display: flex;
+    flex-direction:column;
+    width:80%;
+    gap: 2em;
+  }
+  #why{
+    width: 100vw;
+  }
+  .slider-container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .slide img{
+    display: none;
+
+  }
+  .slider-container{
+    background-image: url("src/assets/fondob.jpg");
+    text-align: center;
+
+  }
+  .tilte{
+    position: absolute;
+    color: #fc4c10;
+    font-size: 35px;
+    top: 10%;
+    left: 10%;
+    z-index: 2;
+
+  }
+
+  .subt{
+    position: absolute;
+    color: #484d5b;
+    font-size:18px;
+    top: 30%;
+    left: 10%;
+    z-index: 2;
+    font-weight: 400;
+  }
+  .btn{
+
+    color: #fff;
+    font-size:20px;
+    top: 60%;
+   left: 30%;
+    z-index: 2;
+
+  }
+  #calidad{
+    text-align: center;
+
+  }
+  .calidad{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+
+  }
+  .calidad-container{
+    width: 100%;
+
+  }
+  .txt-calidad{
+    padding: 1em 1em;
+    width: 90%;
+  }
+
+  .servicios{
+    height: auto;
+  }
+  .servicios-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  .servicios-container > div {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .certificaciones, .ventas{
+    height: 400px;
+  }
+  .diseño,.instalacion{
+    height: 400px;
+  }
+  .boton,.boton2 {
+
+    bottom: 25%;
+
+    opacity: 1;
+
+  }
+  .main h1{
+    font-family: 'Nokora', sans-serif;
+    font-size: 2em;
+
+  }
+  .main {
+    width:90%;
+    margin-left: 5%;
+  }
+  #contact{
+    height: 550px;
+  }
+
+}

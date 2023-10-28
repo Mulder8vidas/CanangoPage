@@ -1,0 +1,97 @@
+<section #portada>
+  <div class="slider-container">
+    <div *ngFor="let image of images; let i = index" class="slide" [ngClass]="{'active': i === currentIndex}">
+      <img src="{{image.img}}" alt="">
+      <h1 class="tilte">INGENIERÍA Y PROYECTOS </h1>
+      <h1 class="subt">Soluciones de Bombeo y Control Eléctrico de Alta Calidad <br> para Sistemas de Riego e Incendios: Expertos en
+        <br> Ingeniería de Agua.</h1>
+      <a  target="_blank" href="https://wa.me/51907339117" class="btn">Contactanos</a>
+    </div>
+  </div>
+</section>
+<section id="calidad" class="servicios">
+  <div class="calidad">
+    <div class="txt-calidad">
+      <h1 class="titulo">Servicios de Ingeniería y Compromiso de Calidad</h1>
+      <p>Analizamos cada proyecto de forma individualizada, poniendo especial énfasis en la rentabilidad del servicio y en la optimización de recursos a lo largo de todas las etapas de diseño y construcción, lo que garantiza la reducción de costos. Nuestro objetivo es proporcionar un valor significativo a su infraestructura.</p>
+      <p>Gracias a nuestros servicios especializados de ingeniería de instalaciones y obras, abordamos de manera integral el análisis, diseño, estudio y ejecución de proyectos, poniendo a su disposición los recursos humanos, técnicos y materiales necesarios.</p>
+      <p>Nuestra profesionalidad y experiencia, respaldadas por certificaciones oficiales, son un testimonio de la calidad que ofrecemos en nuestros servicios de ingeniería.</p>
+      <br><br><a  class="btn-servicios" (click)="dyfrouter()">Ver Servicios</a>
+    </div>
+    <div class="calidad-container">
+      <div *ngFor="let image of calidad; let i = index" class="img-calidad" [ngClass]="{'activo': i === currentIndex2}">
+        <img src="{{image.img}}" alt="calidad-canango">
+      </div>
+      <div class="bolota">
+        <div *ngFor="let image of calidad;let i=index" class="bolitas" >
+          <div (click)="estadoBolita(i)" class="bola" [ngClass]="{'bola-activa': i === currentIndex2}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<h1  class="titulo center">Servicios integrales de ingeniería:</h1>
+<section id="servicios" class="servicios-grid"  >
+  <div class="servicios-container">
+    <div class="diseño  posicion">
+      <div class="overlay"></div>
+      <p class="texto">Diseño y fabricacion</p>
+      <button (click)="dyfrouter()" class="boton">Ver Detalles</button>
+    </div>
+    <div  class="servicio2">
+      <div  class="certificaciones  posicion">
+        <div class="overlay"></div>
+        <p class="texto">Certificaciones</p>
+        <button (click)="certificaciones()" class="boton2">Ver Detalles</button>
+      </div>
+      <div  class="ventas  posicion">
+        <div class="overlay "></div>
+        <p class="texto">Venta de equipos</p>
+        <button (click)="venta()" class="boton2">Ver Detalles</button>
+      </div>
+    </div>
+    <div  class="instalacion  posicion">
+      <div class="overlay "></div>
+      <p class="texto">Diseño, instalación y
+        mantenimiento:
+      </p>
+      <button  (click)="instalacion()" class="boton">Ver Detalles</button>
+    </div>
+  </div>
+</section>
+<section id="why">
+  <h1 class="titulo center">¿Porque confiar tu proyecto en  <strong> Canango Group</strong>?</h1>
+  <div class="why">
+    <div class="valor1 borde txt">
+      <i class="fas fa-medal"></i>
+      <h2>Experiencia Probada:</h2>
+      <p>Nuestra empresa cuenta con un respaldo de profesionales altamente experimentados en el sector. Con años de experiencia en proyectos similares, te ofrecemos el conocimiento y la destreza necesarios para garantizar el éxito de tu proyecto.</p>
+    </div>
+    <div class="valor2 borde txt">
+      <i class="fas fa-phone-volume"></i>
+      <h2>Asesoramiento Personalizado:</h2>
+      <p>En cada etapa de tu proyecto, te brindamos asesoramiento constante. Estamos aquí para responder a tus preguntas, abordar tus inquietudes y asegurarnos de que estés informado y cómodo durante todo el proceso. Tu satisfacción es nuestra prioridad.</p>
+    </div>
+    <div class="valor3 borde txt">
+      <i class="fas fa-tools"></i>
+      <h2>Soluciones a Medida:</h2>
+      <p>Reconocemos que cada proyecto es único. Por eso, te ofrecemos soluciones personalizadas que se adaptan a tus necesidades específicas. Trabajamos contigo para encontrar la solución óptima que cumpla con tus expectativas y requerimientos.</p>
+    </div>
+    <div class="valor4 txt borde ">
+      <i class="fas fa-star "></i>
+      <h2>Compromiso con la Calidad:</h2>
+      <p>Nos enorgullece ofrecer calidad y compromiso inquebrantables a nuestros clientes. Nuestra reputación se basa en la excelencia en cada proyecto que emprendemos, respaldada por informes técnicos detallados que garantizan instalaciones de calidad.</p>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <div class="contact-container">
+    <div class="main">
+      <h1>Contacta con <strong>Canango Group</strong></h1>
+      <p>Estamos a solo un mensaje de distancia! Ponte en contacto con nosotros y comencemos a construir juntos soluciones a medida para tus necesidades. Tu opinión y tus proyectos son importantes para nosotros, y estamos listos para escucharte.</p>
+      <br>
+      <a  href="https://wa.me/51907339117" class="ctn button">Contactanos</a>
+    </div>
+  </div>
+</section>
